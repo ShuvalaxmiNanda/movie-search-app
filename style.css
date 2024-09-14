@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background:url(./image1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+
+}
+.app-name{
+    padding:10px;
+    margin :10px;
+}
+.text-gradient{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(77, 13, 161) 0%, rgb(155, 27, 167) 35%, rgb(255, 0, 128) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+}
+.body-container{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+h2{
+    font-size: 30px;
+}
+p{
+    font-size:25px;
+}
+form{
+    margin:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    width: 100%;
+}
+input{
+    padding:10px;
+    width: 70%;
+    max-width: 500px;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+input:focus {
+    border-color: #f50454;
+    background-color: #f3e5f5;
+    outline: none;
+    box-shadow: 0 0 10px rgba(98, 0, 234, 0.8);
+  }
+.submit-btn{
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #f50454;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+.submit-btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+.movie-list{
+    list-style-type: none;
+    padding:40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.movie-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    padding: 15px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.movie-item:hover {
+    transform: translateY(-5px); 
+}
+
+.movie-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    color:#d6d6d6;
+}
+
+.movie-item img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.movie-item p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+    color:#d6d6d6;
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding:40px 0;
+    text-align: center;
+    width: 100vw;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+    color: #ff6f61;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.footer-content p {
+    font-size: 16px;
+    color: #bbb;
+    line-height: 1.6;
+}
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-social .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+.social-icon:hover{
+    transform: scale(1.2);
+}
+.social-icon img {
+    width: 35px;
+    height: 35px;
+}
+
+.footer-bottom {
+    background-color: #121212;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #bbb;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.footer-bottom p a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+.footer-bottom p a:hover {
+    text-decoration: underline;
+}
+
+@media (width <= 480px) {
+    .text-gradient {
+        font-size: 1.5rem;
+    }
+    input {
+        width: 90%;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .submit-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    .movie-item {
+        width: 100%; 
+        flex-direction: column;
+    }
+    .footer-content h3 {
+        font-size: 20px;
+    }
+    .footer-content p {
+        font-size: 14px;
+    }
+}
