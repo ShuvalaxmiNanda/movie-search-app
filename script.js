@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const getMovieForm = document.getElementById('movieForm')
 const movieData = document.getElementById('movieSearch')
 const getMovieList = document.getElementById('movieList')
@@ -6,7 +8,7 @@ const getMovieList = document.getElementById('movieList')
 getMovieForm.addEventListener('submit', async (event)=>{
     event.preventDefault()
     const movieTitle = movieData.value
-    const apiKey = 'a3c52611'
+    const apiKey = process.env.API_KEY
     const url = `https://www.omdbapi.com/?s=${movieTitle}&apikey=${apiKey}`
     const options = {
         method: 'GET'
